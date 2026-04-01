@@ -19,15 +19,32 @@
     }
 
     .container {
-      line-height: 1.2; /* tighter leading */
-      opacity: 0;
-      animation: fadeIn 2s forwards;
+      line-height: 1.1; /* tighter leading */
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Fade-in animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
     }
+
+    /* Keyframes for fade-in + upward movement */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Stagger each line */
+    .fade:nth-child(1) { animation-delay: 0s; }
+    .fade:nth-child(2) { animation-delay: 0.4s; }
+    .fade:nth-child(3) { animation-delay: 0.8s; }
+    .fade:nth-child(4) { animation-delay: 1.2s; }
+    .fade:nth-child(5) { animation-delay: 1.6s; }
+    .fade:nth-child(6) { animation-delay: 2s; }
+    .fade:nth-child(7) { animation-delay: 2.4s; }
 
     .container span {
       display: block;
@@ -37,7 +54,7 @@
     .main-text {
       font-size: 40pt;
       font-weight: normal;
-      text-transform: none; /* normal capitalization */
+      text-transform: none;
     }
 
     .popup-bar {
@@ -50,6 +67,7 @@
       text-decoration: underline;
       color: black;
       font-size: 40pt;
+      display: inline-block; /* needed for animation */
     }
 
     .rsvp-link:hover {
@@ -59,13 +77,13 @@
 </head>
 <body>
   <div class="container">
-    <span class="main-text">Save the date</span>
-    <span class="main-text">Andre Magana & Carly Mandel</span>
-    <span class="main-text">Marriage celebration</span>
-    <span class="popup-bar">(Popup bar)</span>
-    <span class="main-text">August 22, 2026</span>
-    <span class="main-text">Brooklyn, New York</span>
-    <a class="rsvp-link" href="survey.html">RSVP here by July 1, 2026</a>
+    <span class="main-text fade">Save the date</span>
+    <span class="main-text fade">Andre Magana & Carly Mandel</span>
+    <span class="main-text fade">Marriage celebration</span>
+    <span class="popup-bar fade">(Popup bar)</span>
+    <span class="main-text fade">August 22, 2026</span>
+    <span class="main-text fade">Brooklyn, New York</span>
+    <a class="rsvp-link fade" href="survey.html">RSVP here by July 1, 2026</a>
   </div>
 </body>
 </html>
