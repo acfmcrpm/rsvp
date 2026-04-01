@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Save the Date</title>
   <!-- Inter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -21,7 +21,7 @@
     .container {
       line-height: 1; /* tight leading */
       opacity: 0;
-      animation: fadeIn 2s forwards; /* all fade in together */
+      animation: fadeIn 2s ease forwards; /* all fade in together */
     }
 
     @keyframes fadeIn {
@@ -31,18 +31,22 @@
 
     .container span {
       display: block;
-      margin: 0.3rem 0;
+      margin: 0.2rem 0; /* tight spacing */
     }
 
     .main-text {
       font-size: 40pt;
-      font-weight: 400;
+      font-weight: 400; /* non-bold by default */
       text-transform: uppercase;
+    }
+
+    .bold {
+      font-weight: 700; /* bold text */
     }
 
     .popup-bar {
       font-size: 25pt;
-      font-weight: 400;
+      font-weight: 700; /* bold */
       text-transform: uppercase;
       margin-bottom: 1rem; /* extra space after popup bar */
     }
@@ -52,6 +56,8 @@
       color: black;
       font-size: 40pt;
       display: inline-block;
+      font-weight: 700; /* bold */
+      margin-top: 0.2rem;
     }
 
     .rsvp-link:hover {
@@ -61,19 +67,20 @@
     .details {
       font-size: 20pt;
       font-style: italic;
-      margin-top: 1.5rem; /* line and a half space */
+      margin-top: 1.5rem; /* line-and-a-half spacing */
       display: block;
+      font-weight: 400; /* normal, not bold */
     }
   </style>
 </head>
 <body>
   <div class="container">
     <span class="main-text">SAVE THE DATE</span>
-    <span class="main-text">ANDRE MAGANA & CARLY MANDEL</span>
-    <span class="main-text">MARRIAGE CELEBRATION</span>
+    <span class="main-text bold">ANDRE MAGANA & CARLY MANDEL</span>
+    <span class="main-text bold">MARRIAGE CELEBRATION</span>
     <span class="popup-bar">(POPUP BAR)</span>
-    <span class="main-text">AUGUST 22, 2026</span>
-    <span class="main-text">BROOKLYN, NEW YORK</span>
+    <span class="main-text bold">AUGUST 22, 2026</span>
+    <span class="main-text bold">BROOKLYN, NEW YORK</span>
     <a class="rsvp-link" href="survey.html">RSVP HERE BY JULY 1, 2026</a>
     <span class="details">DETAILS TO FOLLOW</span>
   </div>
