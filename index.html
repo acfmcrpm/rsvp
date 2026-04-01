@@ -19,48 +19,32 @@
     }
 
     .container {
-      line-height: 1; /* very tight leading */
-    }
-
-    /* Fade-in animation */
-    .fade {
+      line-height: 1; /* tight leading */
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
+      animation: fadeIn 2s forwards; /* all fade in together */
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    /* Stagger each line */
-    .fade:nth-child(1) { animation-delay: 0s; }
-    .fade:nth-child(2) { animation-delay: 0.4s; }
-    .fade:nth-child(3) { animation-delay: 0.8s; }
-    .fade:nth-child(4) { animation-delay: 1.2s; }
-    .fade:nth-child(5) { animation-delay: 1.6s; }
-    .fade:nth-child(6) { animation-delay: 2s; }
-    .fade:nth-child(7) { animation-delay: 2.4s; }
-    .fade:nth-child(8) { animation-delay: 2.8s; } /* new last line */
 
     .container span {
       display: block;
-      margin: 0.3rem 0; /* tighter vertical spacing */
+      margin: 0.3rem 0;
     }
 
     .main-text {
       font-size: 40pt;
       font-weight: 400;
-      text-transform: uppercase; /* all caps */
+      text-transform: uppercase;
     }
 
     .popup-bar {
       font-size: 25pt;
       font-weight: 400;
       text-transform: uppercase;
+      margin-bottom: 1rem; /* extra space after popup bar */
     }
 
     .rsvp-link {
@@ -75,23 +59,23 @@
     }
 
     .details {
-      font-size: 13pt;
+      font-size: 20pt;
       font-style: italic;
-      margin-top: 0.5rem;
+      margin-top: 1.5rem; /* line and a half space */
       display: block;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <span class="main-text fade">SAVE THE DATE</span>
-    <span class="main-text fade">ANDRE MAGANA & CARLY MANDEL</span>
-    <span class="main-text fade">MARRIAGE CELEBRATION</span>
-    <span class="popup-bar fade">(POPUP BAR)</span>
-    <span class="main-text fade">AUGUST 22, 2026</span>
-    <span class="main-text fade">BROOKLYN, NEW YORK</span>
-    <a class="rsvp-link fade" href="survey.html">RSVP HERE BY JULY 1, 2026</a>
-    <span class="details fade">DETAILS TO FOLLOW</span>
+    <span class="main-text">SAVE THE DATE</span>
+    <span class="main-text">ANDRE MAGANA & CARLY MANDEL</span>
+    <span class="main-text">MARRIAGE CELEBRATION</span>
+    <span class="popup-bar">(POPUP BAR)</span>
+    <span class="main-text">AUGUST 22, 2026</span>
+    <span class="main-text">BROOKLYN, NEW YORK</span>
+    <a class="rsvp-link" href="survey.html">RSVP HERE BY JULY 1, 2026</a>
+    <span class="details">DETAILS TO FOLLOW</span>
   </div>
 </body>
 </html>
