@@ -1,86 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Save the Date</title>
-  <!-- Inter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: 'Inter', Helvetica, Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save the Date</title>
+<!-- Inter font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+  }
 
-    .container {
-      line-height: 1; /* tight leading */
-      opacity: 0;
-      animation: fadeIn 2s ease forwards; /* all fade in together */
-    }
+  .container {
+    line-height: 1.2; /* more breathing room */
+    opacity: 0;
+    animation: fadeIn 2s ease forwards; /* fade in all together */
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-    .container span {
-      display: block;
-      margin: 0.2rem 0; /* tight spacing */
-    }
+  .container span,
+  .container a {
+    display: block;
+    margin: 0.3rem 0; /* vertical spacing */
+    text-transform: uppercase;
+    font-weight: 700; /* everything bold */
+  }
 
-    .main-text {
-      font-size: 40pt;
-      font-weight: 400; /* non-bold by default */
-      text-transform: uppercase;
-    }
+  /* Variable font sizes to form a rectangular block */
+  .line1 { font-size: 40pt; }  /* SAVE THE DATE */
+  .line2 { font-size: 35pt; }  /* Names */
+  .line3 { font-size: 35pt; }  /* Marriage Celebration */
+  .line4 { font-size: 28pt; margin-bottom: 1rem; }  /* Popup Bar */
+  .line5 { font-size: 32pt; }  /* Date */
+  .line6 { font-size: 28pt; }  /* Location */
+  .rsvp-link { 
+    font-size: 36pt; 
+    color: black; 
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 0.3rem;
+  }
+  .details { 
+    font-size: 20pt; 
+    font-style: italic; 
+    margin-top: 1.5rem; 
+  }
 
-    .bold {
-      font-weight: 700; /* bold text */
-    }
-
-    .popup-bar {
-      font-size: 25pt;
-      font-weight: 700; /* bold */
-      text-transform: uppercase;
-      margin-bottom: 1rem; /* extra space after popup bar */
-    }
-
-    .rsvp-link {
-      text-decoration: underline;
-      color: black;
-      font-size: 40pt;
-      display: inline-block;
-      font-weight: 700; /* bold */
-      margin-top: 0.2rem;
-    }
-
-    .rsvp-link:hover {
-      opacity: 0.7;
-    }
-
-    .details {
-      font-size: 20pt;
-      font-style: italic;
-      margin-top: 1.5rem; /* line-and-a-half spacing */
-      display: block;
-      font-weight: 400; /* normal, not bold */
-    }
-  </style>
+</style>
 </head>
 <body>
   <div class="container">
-    <span class="main-text">SAVE THE DATE</span>
-    <span class="main-text bold">ANDRE MAGANA & CARLY MANDEL</span>
-    <span class="main-text bold">MARRIAGE CELEBRATION</span>
-    <span class="popup-bar">(POPUP BAR)</span>
-    <span class="main-text bold">AUGUST 22, 2026</span>
-    <span class="main-text bold">BROOKLYN, NEW YORK</span>
+    <span class="line1">SAVE THE DATE</span>
+    <span class="line2">ANDRE MAGANA & CARLY MANDEL</span>
+    <span class="line3">MARRIAGE CELEBRATION</span>
+    <span class="line4">(POPUP BAR)</span>
+    <span class="line5">AUGUST 22, 2026</span>
+    <span class="line6">BROOKLYN, NEW YORK</span>
     <a class="rsvp-link" href="survey.html">RSVP HERE BY JULY 1, 2026</a>
     <span class="details">DETAILS TO FOLLOW</span>
   </div>
