@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Save the Date</title>
-  <!-- Mona Sans font -->
-  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans&display=swap" rel="stylesheet">
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -15,11 +15,11 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-family: 'Mona Sans', Georgia, serif;
+      font-family: 'Inter', Helvetica, Arial, sans-serif;
     }
 
     .container {
-      line-height: 1.1; /* tighter leading */
+      line-height: 1; /* very tight leading */
     }
 
     /* Fade-in animation */
@@ -29,7 +29,6 @@
       animation: fadeIn 1s forwards;
     }
 
-    /* Keyframes for fade-in + upward movement */
     @keyframes fadeIn {
       to {
         opacity: 1;
@@ -45,45 +44,54 @@
     .fade:nth-child(5) { animation-delay: 1.6s; }
     .fade:nth-child(6) { animation-delay: 2s; }
     .fade:nth-child(7) { animation-delay: 2.4s; }
+    .fade:nth-child(8) { animation-delay: 2.8s; } /* new last line */
 
     .container span {
       display: block;
-      margin: 0.5rem 0;
+      margin: 0.3rem 0; /* tighter vertical spacing */
     }
 
     .main-text {
       font-size: 40pt;
-      font-weight: normal;
-      text-transform: none;
+      font-weight: 400;
+      text-transform: uppercase; /* all caps */
     }
 
     .popup-bar {
       font-size: 25pt;
-      font-weight: normal;
-      text-transform: none;
+      font-weight: 400;
+      text-transform: uppercase;
     }
 
     .rsvp-link {
       text-decoration: underline;
       color: black;
       font-size: 40pt;
-      display: inline-block; /* needed for animation */
+      display: inline-block;
     }
 
     .rsvp-link:hover {
       opacity: 0.7;
     }
+
+    .details {
+      font-size: 13pt;
+      font-style: italic;
+      margin-top: 0.5rem;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <span class="main-text fade">Save the date</span>
-    <span class="main-text fade">Andre Magana & Carly Mandel</span>
-    <span class="main-text fade">Marriage celebration</span>
-    <span class="popup-bar fade">(Popup bar)</span>
-    <span class="main-text fade">August 22, 2026</span>
-    <span class="main-text fade">Brooklyn, New York</span>
-    <a class="rsvp-link fade" href="survey.html">RSVP here by July 1, 2026</a>
+    <span class="main-text fade">SAVE THE DATE</span>
+    <span class="main-text fade">ANDRE MAGANA & CARLY MANDEL</span>
+    <span class="main-text fade">MARRIAGE CELEBRATION</span>
+    <span class="popup-bar fade">(POPUP BAR)</span>
+    <span class="main-text fade">AUGUST 22, 2026</span>
+    <span class="main-text fade">BROOKLYN, NEW YORK</span>
+    <a class="rsvp-link fade" href="survey.html">RSVP HERE BY JULY 1, 2026</a>
+    <span class="details fade">DETAILS TO FOLLOW</span>
   </div>
 </body>
 </html>
